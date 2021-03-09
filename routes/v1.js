@@ -3,6 +3,7 @@ const router = express.Router();
 
 const RoomsController = require('../controllers/RoomsController');
 const ClientsController = require('../controllers/ClientsController');
+const BookingController = require('../controllers/BookingController');
 
 const path = require('path');
 
@@ -13,6 +14,7 @@ router.get('/', function(req, res, next) {
 });
                                              
 router.get('/rooms', RoomsController.get);   
-router.get('/clients', ClientsController.get);         
+router.get('/clients', ClientsController.get);  
+router.get('/booking', BookingController.get);         
 
 module.exports = router;
