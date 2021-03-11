@@ -1,4 +1,4 @@
-const Booking 			= require('../models').Booking;
+const Bookings 			= require('../models').Bookings;
 const validator     = require('validator');
 
 const createBooking = async function(bookingInfo){
@@ -7,6 +7,6 @@ const createBooking = async function(bookingInfo){
     auth_info={}
     auth_info.status='create';
     console.log(bookingInfo)
-    Booking.create(bookingInfo);
+    Bookings.create(bookingInfo);
 }
 module.exports.createBooking = createBooking;

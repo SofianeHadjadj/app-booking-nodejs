@@ -15,6 +15,8 @@ router.get('/', function(req, res, next) {
                                              
 router.get('/rooms', RoomsController.get);   
 router.get('/clients', ClientsController.get);  
-router.get('/booking', BookingController.get);         
+router.get('/booking', BookingController.get);  
+
+router.post('/writebooking', BookingController.create);
 
 module.exports = router;

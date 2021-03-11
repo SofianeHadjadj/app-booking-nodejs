@@ -1,4 +1,4 @@
-const Booking          = require('../models').Booking;
+const Bookings          = require('../models').Bookings;
 const bookingService   = require('../services/BookingService');
 
 const create = async function(req, res){
@@ -17,7 +17,7 @@ module.exports.create = create;
 
 const get = async function(req, res){
     res.setHeader('Content-Type', 'application/json');
-        Booking.findAll({}).then(function(todos) {
+        Bookings.findAll({}).then(function(todos) {
            res.json(todos);
           });       
           
